@@ -1,0 +1,25 @@
+.videoItem {
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.288);
+    border-radius: 4px;
+    padding: .8rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    border-radius: 4px;
+    margin-bottom: .5rem;
+    
+}
+
+.thumbnail img {
+    width: 100%;
+    transform: translateY(-12.5%);
+}
+
+.h3 {
+    color: #575757;
+}
