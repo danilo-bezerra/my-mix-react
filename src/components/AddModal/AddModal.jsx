@@ -1,22 +1,50 @@
 import React from "react";
 import styles from "./AddModal.module.css";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
-const AddModal = ({ setActiveAddModal, setMixList }) => {
-    const [inputTitle, setInputTitle] = React.useState("");
-    const [inputUrl, setInputUrl] = React.useState("");
+const AddModal = ({ setActiveAddModal }) => {
+  const { setMixList } = React.useContext(GlobalContext)
+  const [inputTitle, setInputTitle] = React.useState("");
+  const [inputUrl, setInputUrl] = React.useState("");
+  const [error, setError] = React.useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setMixList((mixList) => [
-          { id: mixList.length + 1, title: inputTitle, url: inputUrl },
-          ...mixList,
-        ]);
-        setActiveAddModal(false);
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(
+      inputUrl.includes("https://www.youtube.com/watch?v=") ||
+        inputUrl.includes("https://youtu.be/")
+    );
+    if (
+      inputUrl.includes("https://www.youtube.com/watch?v=") ||
+      inputUrl.includes("https://youtu.be/")
+    ) {
+      setMixList((mixList) => [
+        { id: mixList.length + 1, title: inputTitle, url: inputUrl },
+        ...mixList,
+      ]);
+      setActiveAddModal(false);
+    } else {
+      setError("Please insert a title and a valid Youtube URL");
+    }
+  };
+
+  React.useEffect(() => {
+    if (
+      inputUrl.includes("https://www.youtube.com/watch?v=") ||
+      inputUrl.includes("https://youtu.be/")
+    ) {
+      setError("");
+    }
+  }, [inputUrl]);
 
   return (
     <div className={styles.container}>
-      <button className={styles["btn-close"]} onClick={() => setActiveAddModal(false)}>X</button>
+      <button
+        className={styles["btn-close"]}
+        onClick={() => setActiveAddModal(false)}
+      >
+        X
+      </button>
       <section className={styles.modal}>
         <header className={styles.modal__header}>
           <h2 className={styles.modal__title}>Add new item</h2>
@@ -46,6 +74,7 @@ const AddModal = ({ setActiveAddModal, setMixList }) => {
             onChange={(e) => setInputUrl(e.target.value)}
             required
           />
+          {error && <p className={styles.modal__error}>{error}</p>}
           <button type="submit">Add to list</button>
         </form>
       </section>

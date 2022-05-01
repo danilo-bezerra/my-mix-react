@@ -26,5 +26,14 @@ button {
 }
 
 button:hover {
-  transform: scale(1.);
+  transform: scale(1.05);
+}
+
+.material-symbols-outlined {
+  color: #ffffff;
+  transition: .2s all;
+}
+
+.material-symbols-outlined:hover {
+  color: #f81919;
 }

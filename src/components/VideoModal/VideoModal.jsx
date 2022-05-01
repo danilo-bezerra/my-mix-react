@@ -1,12 +1,10 @@
 import React from "react";
 import styles from './VideoModal.module.css'
-import {
-  activeVideoContext,
-} from "../..//contexts/activeVideoContext";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 const VideoModal = ({}) => {
   const { setActiveVideoModal, activeVideoModal } =
-    React.useContext(activeVideoContext);
+    React.useContext(GlobalContext);
 
   return activeVideoModal?.title ? (
     <div className={styles.modal}>

@@ -7,7 +7,7 @@ const header = ({ setActiveAddModal = { setActiveAddModal } }) => {
       <div className={styles["header-wrapper"]}>
         <div className={styles.logo}>MYMIX</div>
         <button className={styles["btn-add"]} onClick={() => setActiveAddModal(true)}>
-          ADD
+          ADD NEW
         </button>
       </div>
     </header>

@@ -14,7 +14,7 @@
 }
 
 .videoItem:hover .thumbnail {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .thumbnail {
@@ -33,5 +33,14 @@
 }
 
 .h3 {
-    color: #19aaf8;
+    color: #41aae2;
+}
+
+.videoItem div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.videoItem button{
+    background-color: transparent;
 }

@@ -68,3 +68,9 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+
+.modal__error {
+    font-size: .8rem;
+    color: red;
+    margin-bottom: 8px;
+}

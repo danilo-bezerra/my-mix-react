@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from './VideoList.module.css'
 import VideoItem from '../VideoItem/VideoItem'
+import { GlobalContext } from '../../contexts/GlobalContext';
 
-const VideoList = ({ mixList }) => {
+const VideoList = () => {
+  const { mixList} = React.useContext(GlobalContext);
 
   return (
     <section className={styles.section}>
