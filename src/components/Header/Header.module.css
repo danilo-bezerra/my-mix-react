@@ -1,7 +1,7 @@
 .header {
-    height: 60px;
-    background: #fff;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    height:75px;
+    background: #031b27;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.212)
 }
 
 .header-wrapper {
@@ -16,9 +16,9 @@
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
-    color: #333;
+    color: #19aaf8;
     text-decoration: none;
 }
 
@@ -26,13 +26,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #7159c1;
+    background: #1E9ADF;
     color: #fff;
     border: 0;
     border-radius: 4px;
     height: 40px;
     width: 40px;
     font-size: 16px;
-    padding: 0 2rem;
+    padding: 0 3rem;
     cursor: pointer;
 }

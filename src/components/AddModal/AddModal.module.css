@@ -15,14 +15,14 @@
     right: 1.5rem;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #724cee;
+    color: #19aaf8;
     background: transparent;
     cursor: pointer;
 
 }
 
 .modal {
-    background-color: #fff;
+    background-color: #031b27;
     border-radius: 4px;
     min-width: 400px;
     max-width: 500px;
@@ -32,6 +32,7 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    color: #19aaf8;
 }
 
 .modal__header {
@@ -52,7 +53,7 @@
 
 .modal__form input,
 .modal__form button {
-    border: 1px solid #ddd;
+    border: 1px solid #0b3349;
     border-radius: 4px;
     padding: 10px;
     width: 100%;
@@ -63,7 +64,7 @@
 
 .modal__form button {
     color: #fff;
-    background: #7159c1;
+    background: #19aaf8;
     text-transform: uppercase;
     cursor: pointer;
 }
