@@ -7,7 +7,6 @@ import { GlobalContextProvider } from "./contexts/GlobalContext";
 import VideoModal from "./components/VideoModal/VideoModal";
 
 function App() {
-  const [mixList, setMixList] = useState([]);
   const [activeAddModal, setActiveAddModal] = useState(false);
 
   return (
@@ -16,7 +15,6 @@ function App() {
       <VideoList/>
       {activeAddModal && (
         <AddModal
-          setMixList={setMixList}
           setActiveAddModal={setActiveAddModal}
         />
       )}

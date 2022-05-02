@@ -10,7 +10,6 @@ const VideoItem = ({ item }) => {
   const { setActiveVideoModal, deleteVideo } = React.useContext(GlobalContext);
 
   function handleClick() {
-    console.log("clicked", item.title, youtubeVideoId);
     setActiveVideoModal({
       title: item.title,
       youtubeVideoId,
